@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Courgette', cursive;
+  background-color: rgb(24, 24, 24);
+  color: rgb(235, 236, 236);
+  font-size: 28px;
+  margin: 0;
+  padding: 0 1em;
+}
+
+nav>a {
+  color: azure;
+}

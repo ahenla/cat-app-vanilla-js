@@ -1,0 +1,42 @@
+/* main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+} */
+
+.card-link {
+  text-decoration: none;
+  width: 30%;
+  display: block;
+  margin: 0.5em;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(59, 59, 59);
+  color: azure;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+.card img {
+  width: 100%
+}
+
+.card-description {
+  text-align: center;
+  text-decoration: none;
+}
+
+.card button {
+  padding: 0.5em;
+  border-radius: 5px;
+  background-color: tomato;
+  color: bisque;
+  border: 1px solid bisque;
+  font-size: 20px;
+}

@@ -1,0 +1,11 @@
+@import "/styles/components/navbar.css";
+@import "/styles/components/footer.css";
+@import "/styles/components/cat_card.css";
+@import "/styles/components/details.css";
+@import "/styles/components/adoption.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
