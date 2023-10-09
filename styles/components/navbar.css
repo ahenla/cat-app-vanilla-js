@@ -14,4 +14,19 @@ nav {
 
 nav>a {
   color: azure;
+  text-decoration: none;
+  position: relative;
+}
+
+.badge {
+  text-align: center;
+  color: azure;
+  width: 16px;
+  font-size: 14px;
+  border-radius: 50%;
+  background-color: tomato;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: Tahoma, sans-serif;
 }

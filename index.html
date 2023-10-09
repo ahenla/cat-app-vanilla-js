@@ -19,29 +19,13 @@
 
       <a href="#">
         <i class="fa-solid fa-cat"></i>
+        <div hidden class="badge">1</div>
       </a>
 
     </nav>
 
     <main>
-      <div class="cat-adoption">
-        <div class="adoption-list">
-          <div class="adoption-card">
-            <img src="/cat.jpg" alt="cat-picture">
-            <p>Senior gatito</p>
-            <button><i class="fa-solid fa-circle-minus"></i></button>
-          </div>
-        </div>
-        <form action="#">
-          <h3>Fill the adoption form</h3>
-          <input type="text" name="name" placeholder="Name">
-          <input type="text" name="address" placeholder="Address">
-          <input type="text" name="phone" placeholder="Phone number">
-          <input type="text" name="email" placeholder="E-mail">
-          <input type="submit" name="submit" value="get a cat!">
 
-        </form>
-      </div>
     </main>
 
     <footer>
@@ -106,6 +90,30 @@
 
       </div>
 
+    </template>
+
+    <template id="adoption-page-template">
+      <div class="cat-adoption">
+
+        <h2>Your adoption list</h2>
+        <ul class="adoption-list">
+          <li class="adoption-card">
+            <img src="/cat.jpg" alt="cat-picture">
+            <p>Senior gatito</p>
+            <button><i class="fa-solid fa-circle-minus"></i></button>
+          </li>
+        </ul>
+
+        <form action="#">
+          <h3>Fill the adoption form</h3>
+          <input type="text" name="name" placeholder="Name">
+          <input type="text" name="address" placeholder="Address">
+          <input type="text" name="phone" placeholder="Phone number">
+          <input type="text" name="email" placeholder="E-mail">
+          <input class="submit" type="submit" name="submit" value="get a cat!">
+        </form>
+
+      </div>
     </template>
   </body>
 
