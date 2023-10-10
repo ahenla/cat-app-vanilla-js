@@ -3,3 +3,5 @@ export default class QuestionsPage extends HTMLElement {
     super()
   }
 }
+
+customElements.define("questions-page", QuestionsPage)

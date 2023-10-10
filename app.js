@@ -3,6 +3,11 @@ import API from "./services/API.js"
 import Router from "./services/Router.js"
 import { loadCats } from "./services/CatList.js";
 
+//import components
+import CatListPage from "./components/CatList.js";
+import DetailsPage from "./components/Details.js";
+import AdoptionPage from "./components/Adoption.js";
+
 
 window.app = {
   store: Store,

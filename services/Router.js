@@ -29,24 +29,20 @@ const Router = {
 
     switch (route) {
       case '/':
-        pageElement = document.createElement('h1');
-        pageElement.textContent = "Cat List";
+        pageElement = document.createElement('catList-page');
         break;
       case '/adoption':
-        pageElement = document.createElement('h1')
-        pageElement.textContent = "Adoption page";
+        pageElement = document.createElement('adoption-page')
         break;
       case '/questions':
-        pageElement = document.createElement('h1')
-        pageElement.textContent = "Common Questions";
+        pageElement = document.createElement('questions-page')
         break;
-      // default:
-      //   if (route.startsWith("/cat-")) {
-      //     pageElement = document.createElement('h1')
-      //     pageElement.textContent = "details"
-      //     pageElement.dataset.catID = route.substring(route.lastIndexOf('-') + 1)
-      //   }
-      //   break
+      default:
+        if (route.startsWith("/cat-")) {
+          pageElement = document.createElement('details-page')
+          pageElement.dataset.catID = route.substring(route.lastIndexOf('-') + 1)
+        }
+        break
     }
 
     if (pageElement) {
