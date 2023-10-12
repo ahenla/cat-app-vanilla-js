@@ -6,11 +6,20 @@ export default class DetailsPage extends HTMLElement {
     super()
 
     this.root = this.attachShadow({ mode: 'open' });
-
+    const template = document.getElementById('details-page-template');
+    const content = template.content.cloneNode(true)
+    this.root.appendChild(content)
     const styles = document.createElement('details-page')
     this.root.appendChild(styles)
 
     loadCSS(styles, 'details')
+  }
+
+  async renderData() {
+    if (this.dataset.catId) {
+      this.cat = getCatById(this.dataset.catId);
+
+    }
   }
 
   connectedCallack() {

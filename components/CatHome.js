@@ -6,6 +6,10 @@ export default class CatHomePage extends HTMLElement {
 
     this.root = this.attachShadow({ mode: 'open' })
 
+    const template = document.getElementById("home-page-template");
+    const content = template.content.cloneNode(true);
+    this.root.appendChild(content)
+
     const styles = document.createElement('style')
     this.root.appendChild(styles)
 
@@ -13,9 +17,6 @@ export default class CatHomePage extends HTMLElement {
   }
 
   connectedCallback() {
-    const template = document.getElementById("home-page-template");
-    const content = template.content.cloneNode(true);
-    this.root.appendChild(content)
 
     window.addEventListener("catlistchange", () => {
       this.render()
@@ -25,11 +26,11 @@ export default class CatHomePage extends HTMLElement {
 
   render() {
     const list = this.root.getElementById('cat-list')
+    list.innerHTML = ""
 
     if (app.store.catlist) {
-      list.innerHTML = "<h1>Cat List</h1>"
 
-      for (let cat of app.store.menu) {
+      for (let cat of app.store.catlist) {
         const liItem = document.createElement('li');
         const catItem = document.createElement('cat-item')
         catItem.dataset.cat = JSON.stringify(cat)
@@ -37,7 +38,7 @@ export default class CatHomePage extends HTMLElement {
         list.appendChild(liItem)
       }
     } else {
-      list.innerHTML = "Loading 😼"
+      list.innerHTML = "Loading 😼..."
     }
   }
 }

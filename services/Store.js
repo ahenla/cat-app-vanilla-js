@@ -1,4 +1,3 @@
-import API from "./API.js"
 
 const Store = {
   catlist: null,
@@ -13,7 +12,7 @@ const proxyStore = new Proxy(Store, {
       window.dispatchEvent(new Event("catlistchange"))
     }
 
-    if (property == "cart") {
+    if (property == "catcart") {
       window.dispatchEvent(new Event("catcartchange"))
     }
 
@@ -25,4 +24,4 @@ const proxyStore = new Proxy(Store, {
   }
 })
 
-export default Store;
+export default proxyStore;

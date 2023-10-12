@@ -6,13 +6,13 @@ export default class CatItem extends HTMLElement {
 
   connectedCallback() {
     const template = document.getElementById('cat-item-template');
-    const content = template.cloneNode(true);
+    const content = template.content.cloneNode(true);
     this.appendChild(content)
-
+    console.log('connected');
     const cat = JSON.parse(this.dataset.cat);
-    this.querySelector('img').src = cat['url']
-    this.querySelector('.breed').src = cat['breed'[0]]['name']
-    this.querySelector('.age').src = `${Math.floor(Math.random() * 5) + 1} year(s) old`
+    this.querySelector('img').src = cat.url
+    this.querySelector('.breed').innerHTML = `<strong>breed:</strong> <br> ${cat.breeds[0].name}`
+    this.querySelector('.temperament').innerHTML = `<strong>temperament:</strong> <br> ${cat.breeds[0].temperament}`
 
     this.querySelector('.card-link').addEventListener('click', event => {
       console.log(event.target.tagName)

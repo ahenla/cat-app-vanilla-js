@@ -1,8 +1,7 @@
 import API from "./API.js"
 
 export async function loadCats() {
-  const data = API.fetchCats();
-  app.store.catlist = data;
+  app.store.catlist = await API.fetchCats();
 }
 
 export async function getCatById(id) {

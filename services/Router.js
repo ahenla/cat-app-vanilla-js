@@ -29,7 +29,7 @@ const Router = {
 
     switch (route) {
       case '/':
-        pageElement = document.createElement('catList-page');
+        pageElement = document.createElement('catHome-page');
         break;
       case '/adoption':
         pageElement = document.createElement('adoption-page')
