@@ -37,12 +37,12 @@ const Router = {
       case '/questions':
         pageElement = document.createElement('questions-page')
         break;
-      default:
-        if (route.startsWith("/cat-")) {
-          pageElement = document.createElement('details-page')
-          pageElement.dataset.catID = route.substring(route.lastIndexOf('-') + 1)
-        }
-        break
+      // default:
+      //   if (route.startsWith("/cat-")) {
+      //     pageElement = document.createElement('details-page')
+      //     pageElement.dataset.catID = route.substring(route.lastIndexOf('-') + 1)
+      //   }
+      //   break
     }
 
     if (pageElement) {

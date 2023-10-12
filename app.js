@@ -7,6 +7,7 @@ import { loadCats } from "./services/CatList.js";
 import CatListPage from "./components/CatList.js";
 import DetailsPage from "./components/Details.js";
 import AdoptionPage from "./components/Adoption.js";
+import QuestionsPage from "./components/Questions.js";
 
 
 window.app = {

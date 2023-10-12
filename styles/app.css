@@ -3,6 +3,7 @@
 @import "/styles/components/cat_list.css";
 @import "/styles/components/details.css";
 @import "/styles/components/adoption.css";
+@import "/styles/components/questions.css";
 
 body {
   margin: 0;
