@@ -8,6 +8,7 @@ import CatListPage from "./components/CatHome.js";
 import DetailsPage from "./components/Details.js";
 import AdoptionPage from "./components/Adoption.js";
 import QuestionsPage from "./components/Questions.js";
+import CatItem from "./components/CatItem.js";
 
 
 window.app = {

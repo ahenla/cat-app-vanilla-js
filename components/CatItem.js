@@ -25,6 +25,7 @@ export default class CatItem extends HTMLElement {
       event.preventDefault()
     })
 
-
   }
 }
+
+customElements.define("cat-item", CatItem)

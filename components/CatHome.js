@@ -31,9 +31,9 @@ export default class CatHomePage extends HTMLElement {
 
       for (let cat of app.store.menu) {
         const liItem = document.createElement('li');
-
-        //todo
-
+        const catItem = document.createElement('cat-item')
+        catItem.dataset.cat = JSON.stringify(cat)
+        liItem.appendChild(catItem)
         list.appendChild(liItem)
       }
     } else {
@@ -42,4 +42,4 @@ export default class CatHomePage extends HTMLElement {
   }
 }
 
-customElements.define("cathome-page", CatListPage)
+customElements.define("cathome-page", CatHomePage)
