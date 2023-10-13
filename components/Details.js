@@ -1,5 +1,6 @@
 import { loadCSS } from "../services/functions.js";
 import { getCatById } from "../services/functions.js";
+import { addToCart } from "../services/functions.js";
 
 export default class DetailsPage extends HTMLElement {
   constructor() {

@@ -1,4 +1,5 @@
 import { loadCSS } from "../services/functions.js";
+import { addToCart } from "../services/functions.js";
 
 export default class CatHomePage extends HTMLElement {
   constructor() {
