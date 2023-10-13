@@ -24,8 +24,10 @@
 }
 
 .cat-description p {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
+  padding: 1em;
+  line-height: 1.5;
 }
 
 .cat-description button {
@@ -38,4 +40,9 @@
   font-size: 20px;
   width: 70%;
   margin: 0 auto;
+}
+
+.cat-details>img {
+  max-width: 50%;
+  object-fit: cover;
 }

@@ -17,10 +17,10 @@ export default class CatItem extends HTMLElement {
     this.querySelector('.card-link').addEventListener('click', event => {
       console.log(event.target.tagName)
 
-      if (event.target.tagName.toLowercCase() == 'button') {
+      if (event.target.tagName.toLowerCase() == 'button') {
         //todo
       } else {
-        app.router.go(`cat-${cat['id']}`)
+        app.router.go(`/cat-${cat.id}`)
       }
       event.preventDefault()
     })

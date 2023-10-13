@@ -1,7 +1,7 @@
 import Store from "./services/Store.js"
 import API from "./services/API.js"
 import Router from "./services/Router.js"
-import { loadCats } from "./services/CatList.js";
+import { loadCats } from "./services/functions.js";
 
 //import components
 import CatHometPage from "./components/CatHome.js";
@@ -20,4 +20,10 @@ window.addEventListener("DOMContentLoaded", async () => {
   console.log('Dom is loaded');
   loadCats();
   app.router.init()
+})
+
+window.addEventListener("catcartchange", () => {
+  const badge = document.getElementById('badge');
+  badge.textContent = app.store.catcart.length;
+  badge.hidden = app.store.catcart.length == 0;
 })

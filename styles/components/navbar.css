@@ -18,7 +18,7 @@ nav>a {
   position: relative;
 }
 
-.badge {
+#badge {
   text-align: center;
   color: azure;
   width: 16px;

@@ -1,5 +1,5 @@
 import { loadCSS } from "../services/functions.js";
-import { getCatById } from "../services/CatList.js";
+import { getCatById } from "../services/functions.js";
 
 export default class DetailsPage extends HTMLElement {
   constructor() {
@@ -9,23 +9,32 @@ export default class DetailsPage extends HTMLElement {
     const template = document.getElementById('details-page-template');
     const content = template.content.cloneNode(true)
     this.root.appendChild(content)
-    const styles = document.createElement('details-page')
+    const styles = document.createElement('style')
     this.root.appendChild(styles)
 
     loadCSS(styles, 'details')
   }
 
-  async renderData() {
+  async render() {
     if (this.dataset.catId) {
-      this.cat = getCatById(this.dataset.catId);
-
+      this.cat = await getCatById(this.dataset.catId);
+      this.c = this.cat.breeds[0];
+      this.root.querySelector('.temperament').innerHTML = `<strong>temperament:</strong><br> ${this.c.temperament}`
+      this.root.querySelector('.breed').innerHTML = `<strong>breed:</strong><br> ${this.c.name}`;
+      this.root.querySelector('.description').innerHTML = `<strong>description:</strong><br> ${this.c.description}`
+      this.root.querySelector('.lifespan').innerHTML = `<strong>lifespan:</strong><br> ${this.c.life_span} years`
+      this.root.querySelector('img').src = this.cat.url
+      this.root.querySelector('button').addEventListener('click', event => {
+        //TODO add cat to cart
+        app.router.go('/adoption')
+      })
+    } else {
+      alert("Invalid cat ID")
     }
   }
 
-  connectedCallack() {
-    const template = document.getElementById("details-page-template");
-    const content = template.content.cloneNode(true);
-    this.root.appendChild(content)
+  connectedCallback() {
+    this.render()
   }
 }
 
