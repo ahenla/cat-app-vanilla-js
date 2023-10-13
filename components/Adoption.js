@@ -15,6 +15,10 @@ export default class AdoptionPage extends HTMLElement {
     loadCSS(styles, 'adoption')
   }
 
+  render() {
+
+  }
+
   connectedCallback() {
 
   }
