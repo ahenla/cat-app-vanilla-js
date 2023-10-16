@@ -1,4 +1,4 @@
-import { removeFromCart } from "../services/functions";
+import { removeFromCart } from "../services/functions.js";
 
 export default class AdoptionItem extends HTMLElement {
   constructor() {
@@ -19,6 +19,7 @@ export default class AdoptionItem extends HTMLElement {
 
     this.querySelector('button').addEventListener('click', event => {
       removeFromCart(catItem.id)
+      console.log('removed');
     })
   }
 }

@@ -4,10 +4,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/badffd336d.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/badffd336d.js" crossorigin="anonymous"></script> -->
     <title>Get a cat</title>
     <link rel="stylesheet" href="/styles/app.css">
     <script src="app.js" defer type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body>
@@ -20,7 +23,7 @@
 
       <a href="/adoption">
         <i class="fa-solid fa-cat"></i>
-        <div id="badge">1</div>
+        <div id="badge"></div>
       </a>
 
     </nav>
@@ -98,18 +101,21 @@
     </template>
 
     <template id="adoption-item-template">
-      <li class="adoption-card">
-        <img src="/cat.jpg" alt="cat-picture">
-        <p class="breed">bengal</p>
-        <button><i class="fa-solid fa-circle-minus"></i></button>
-      </li>
+      <img src="/cat.jpg" alt="cat-picture">
+      <p class="breed">bengal</p>
+      <button><i class="fa-solid fa-circle-minus"></i></button>
     </template>
 
     <template id="adoption-page-template">
-      <script src="https://kit.fontawesome.com/badffd336d.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
       <div class="cat-adoption">
         <h2>Your adoption list</h2>
+
         <ul class="adoption-list">
+
         </ul>
 
         <form action="#">
@@ -120,12 +126,10 @@
           <input type="text" name="email" placeholder="E-mail">
           <input class="submit" type="submit" name="submit" value="get a cat!">
         </form>
-
       </div>
     </template>
 
     <template id="questions-page-template">
-
       <div class="questions">
         <h1>Common Questions</h1>
         <ul>
@@ -136,7 +140,7 @@
           </li>
           <li>
             <h3>Are cats better than dogs?</h3>
-            <p>The answer to that questions can be difficult, because it depends of
+            <p>The answer to that question can be difficult, because it depends of
               multiple factors, but the short answer is <strong>Yes!</strong>
             </p>
             <img src="./cat-q2.jpg" alt="cat-picture">

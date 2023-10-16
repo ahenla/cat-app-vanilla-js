@@ -46,5 +46,5 @@ export async function addToCart(id) {
 //remove cat from cart
 
 export function removeFromCart(id) {
-  app.store.catcart.filter(catInCart => catInCart.id != id)
+  app.store.catcart = app.store.catcart.filter(catInCart => catInCart.id != id)
 }

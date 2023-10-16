@@ -1,3 +1,5 @@
+import { addToCart } from "../services/functions.js";
+
 export default class CatItem extends HTMLElement {
   constructor() {
     super()
@@ -18,7 +20,8 @@ export default class CatItem extends HTMLElement {
       console.log(event.target.tagName)
 
       if (event.target.tagName.toLowerCase() == 'button') {
-        //todo
+        addToCart(cat.id)
+        app.router.go('/adoption')
       } else {
         app.router.go(`/cat-${cat.id}`)
       }

@@ -26,7 +26,7 @@ export default class DetailsPage extends HTMLElement {
       this.root.querySelector('.lifespan').innerHTML = `<strong>lifespan:</strong><br> ${this.c.life_span} years`
       this.root.querySelector('img').src = this.cat.url
       this.root.querySelector('button').addEventListener('click', event => {
-        //TODO add cat to cart
+        addToCart(this.cat.id)
         app.router.go('/adoption')
       })
     } else {
