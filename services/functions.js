@@ -25,13 +25,6 @@ export async function loadCSS(styles, component) {
   styles.textContent = await request.text()
 }
 
-//place order
-
-export function placeOrder() {
-  alert("you will receive an email with the details of the adoption in 24 hours");
-  app.store.catcart = []
-}
-
 //add cat to cart
 export async function addToCart(id) {
   const cat = await getCatById(id)

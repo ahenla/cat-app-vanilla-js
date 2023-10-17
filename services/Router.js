@@ -1,17 +1,22 @@
 const Router = {
   init: () => {
-    console.log('router initialized');
+
 
     document.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', event => {
         event.preventDefault();
         const href = event.currentTarget.getAttribute("href");
+        if (href.startsWith('http')) {
+          window.location.href = href
+          // window.location.assign = href
+          // window.location.replace = href
+        }
         Router.go(href)
       })
     })
 
     window.addEventListener('popstate', event => {
-      console.log(event.state.route);
+
       Router.go(event.state.route, false)
     })
     //initial url
@@ -50,8 +55,7 @@ const Router = {
       document.querySelector('main').appendChild(pageElement)
     }
 
-    window.scrollX = 0
-    window.scrollY = 0
+    window.scroll(0, 0)
   }
 }
 

@@ -19,7 +19,6 @@ export default class AdoptionItem extends HTMLElement {
 
     this.querySelector('button').addEventListener('click', event => {
       removeFromCart(catItem.id)
-      console.log('removed');
     })
   }
 }

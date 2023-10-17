@@ -18,7 +18,6 @@ window.app = {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
-  console.log('Dom is loaded');
   loadCats();
   app.router.init()
 })

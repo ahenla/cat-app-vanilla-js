@@ -1,6 +1,14 @@
-import { loadCSS } from "../services/functions.js";
+import { loadCSS, removeFromCart } from "../services/functions.js";
 
 export default class AdoptionPage extends HTMLElement {
+
+  #user = {
+    name: '',
+    address: '',
+    phone: '',
+    email: ''
+  }
+
   constructor() {
     super()
 
@@ -32,6 +40,39 @@ export default class AdoptionPage extends HTMLElement {
         adoptionList.appendChild(liElement)
       }
     }
+
+    this.formBinding(this.root.querySelector('form'))
+  }
+
+  formBinding(form) {
+    form.addEventListener('submit', event => {
+      event.preventDefault()
+      alert(`Thank You ${this.#user.name}, You will soon receive an
+      email to ${this.#user.email} with the details of the adoption.`)
+
+      this.#user.name = ''
+      this.#user.address = ''
+      this.#user.phone = ''
+      this.#user.email = ''
+
+      app.store.catcart = []
+    })
+
+    Array.from(form.elements).forEach((field) => {
+      if (field.name) {
+        field.addEventListener('change', () => {
+          this.#user[field.name] = field.value
+        })
+      }
+    })
+
+    this.#user = new Proxy(this.#user, {
+      set(target, property, value) {
+        target[property] = value
+        form.elements[property].value = value
+        return true
+      }
+    })
   }
 
   connectedCallback() {
