@@ -7,7 +7,7 @@ const Router = {
         event.preventDefault();
         const href = event.currentTarget.getAttribute("href");
         if (href.startsWith('http')) {
-          window.location.href = href
+          window.open(href, '_blank')
           // window.location.assign = href
           // window.location.replace = href
         }
