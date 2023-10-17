@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://kit.fontawesome.com/badffd336d.js" crossorigin="anonymous"></script> -->
     <title>Get a cat</title>
+    <link rel=”preload” href=”cats.json” as=”fetch” type=”application/json” crossorigin=”anonymous”>
     <link rel="stylesheet" href="/styles/app.css">
     <script src="app.js" defer type="module"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -78,7 +79,7 @@
     <template id="cat-item-template">
       <a class="card-link" href="#">
         <div class="card">
-          <img src="/cat.jpg" alt="cat-picture">
+          <img src="" alt="cat-picture">
           <div class="card-description">
             <p class="breed">bengal</p>
             <p class="temperament">3 years old</p>
@@ -101,13 +102,13 @@
           <button>I definetly want this cat!</button>
         </div>
 
-        <img src="/cat.jpg" alt="cat-picture">
+        <img src="" alt="cat-picture">
 
       </div>
     </template>
 
     <template id="adoption-item-template">
-      <img src="/cat.jpg" alt="cat-picture">
+      <img src="" alt="cat-picture">
       <p class="breed">bengal</p>
       <button><i class="fa-solid fa-circle-minus"></i></button>
     </template>

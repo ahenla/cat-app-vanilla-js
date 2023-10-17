@@ -1,12 +1,40 @@
 @import "/styles/components/navbar.css";
 @import "/styles/components/footer.css";
-@import "/styles/components/cat_home.css";
-@import "/styles/components/details.css";
-@import "/styles/components/adoption.css";
-@import "/styles/components/questions.css";
+/* @import "/styles/components/cat_home.css"; */
+/* @import "/styles/components/details.css"; */
+/* @import "/styles/components/adoption.css"; */
+/* @import "/styles/components/questions.css"; */
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+cathhome-page:not(:defined) {
+  display: inline-block;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+details-page:not(:defined) {
+  display: inline-block;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+adoption-page:not(:defined) {
+  display: inline-block;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+questions-page:not(:defined) {
+  display: inline-block;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }

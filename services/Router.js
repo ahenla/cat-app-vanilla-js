@@ -33,6 +33,7 @@ const Router = {
     let pageElement = null;
 
     switch (route) {
+      case '/index.html':
       case '/':
         pageElement = document.createElement('catHome-page');
         break;
