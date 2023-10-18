@@ -1,4 +1,4 @@
-import { loadCSS, removeFromCart } from "../services/functions.js";
+import { removeFromCart } from "../services/functions.js";
 
 export default class AdoptionPage extends HTMLElement {
 
@@ -67,6 +67,11 @@ export default class AdoptionPage extends HTMLElement {
     })
   }
 
+  async loadCSS(styles, component) {
+    const request = await fetch(`/styles/components/${component}.css`);
+    styles.textContent = await request.text()
+  }
+
   connectedCallback() {
     const template = document.getElementById("adoption-page-template");
     const content = template.content.cloneNode(true);
@@ -75,7 +80,7 @@ export default class AdoptionPage extends HTMLElement {
     const styles = document.createElement('style');
     this.root.appendChild(styles)
 
-    loadCSS(styles, 'adoption')
+    this.loadCSS(styles, 'adoption')
 
     window.addEventListener("catcartchange", () => {
       this.render()

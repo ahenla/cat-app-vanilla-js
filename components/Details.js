@@ -1,4 +1,4 @@
-import { loadCSS } from "../services/functions.js";
+// import { loadCSS } from "../services/functions.js";
 import { getCatById } from "../services/functions.js";
 import { addToCart } from "../services/functions.js";
 
@@ -27,6 +27,11 @@ export default class DetailsPage extends HTMLElement {
     }
   }
 
+  async loadCSS(styles, component) {
+    const request = await fetch(`/styles/components/${component}.css`);
+    styles.textContent = await request.text()
+  }
+
   connectedCallback() {
     const template = document.getElementById('details-page-template');
     const content = template.content.cloneNode(true)
@@ -34,7 +39,7 @@ export default class DetailsPage extends HTMLElement {
     const styles = document.createElement('style')
     this.root.appendChild(styles)
 
-    loadCSS(styles, 'details')
+    this.loadCSS(styles, 'details')
 
     this.render()
   }

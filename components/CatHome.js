@@ -1,4 +1,4 @@
-import { loadCSS } from "../services/functions.js";
+// import { loadCSS } from "../services/functions.js";
 import { addToCart } from "../services/functions.js";
 
 export default class CatHomePage extends HTMLElement {
@@ -6,6 +6,11 @@ export default class CatHomePage extends HTMLElement {
     super();
 
     this.root = this.attachShadow({ mode: 'open' })
+  }
+
+  async loadCSS(styles, component) {
+    const request = await fetch(`/styles/components/${component}.css`);
+    styles.textContent = await request.text()
   }
 
   connectedCallback() {
@@ -16,7 +21,7 @@ export default class CatHomePage extends HTMLElement {
     const styles = document.createElement('style')
     this.root.appendChild(styles)
 
-    loadCSS(styles, 'cat_home')
+    this.loadCSS(styles, 'cat_home')
 
     window.addEventListener("catlistchange", () => {
       this.render()
