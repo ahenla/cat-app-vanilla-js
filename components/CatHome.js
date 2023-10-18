@@ -6,7 +6,9 @@ export default class CatHomePage extends HTMLElement {
     super();
 
     this.root = this.attachShadow({ mode: 'open' })
+  }
 
+  connectedCallback() {
     const template = document.getElementById("home-page-template");
     const content = template.content.cloneNode(true);
     this.root.appendChild(content)
@@ -15,9 +17,6 @@ export default class CatHomePage extends HTMLElement {
     this.root.appendChild(styles)
 
     loadCSS(styles, 'cat_home')
-  }
-
-  connectedCallback() {
 
     window.addEventListener("catlistchange", () => {
       this.render()
