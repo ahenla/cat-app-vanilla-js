@@ -39,8 +39,6 @@ export default class AdoptionPage extends HTMLElement {
   formBinding(form) {
     form.addEventListener('submit', event => {
       event.preventDefault()
-      alert(`Thank You ${this.#user.name}, You will soon receive an
-      email to ${this.#user.email} with the details of the adoption.`)
 
       this.#user.name = ''
       this.#user.address = ''
