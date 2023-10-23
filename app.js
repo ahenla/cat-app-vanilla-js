@@ -1,6 +1,6 @@
-import Store from "./services/Store.js"
-import API from "./services/API.js"
-import Router from "./services/Router.js"
+import Store from "./services/Store.js";
+import API from "./services/API.js";
+import Router from "./services/Router.js";
 import { loadCats } from "./services/functions.js";
 
 //import components
@@ -11,19 +11,18 @@ import QuestionsPage from "./components/Questions.js";
 import CatItem from "./components/CatItem.js";
 import AdoptionItem from "./components/AdoptionItem.js";
 
-
 window.app = {
   store: Store,
-  router: Router
-}
+  router: Router,
+};
 
-window.addEventListener("DOMContentLoaded", async () => {
+window.addEventListener("DOMContentLoaded", () => {
   loadCats();
-  app.router.init()
-})
+  app.router.init();
+});
 
 window.addEventListener("catcartchange", () => {
-  const badge = document.getElementById('badge');
+  const badge = document.getElementById("badge");
   badge.textContent = app.store.catcart.length;
   badge.hidden = app.store.catcart.length == 0;
-})
+});
