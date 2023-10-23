@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <script src="https://kit.fontawesome.com/badffd336d.js" crossorigin="anonymous"></script> -->
     <title>Get a cat</title>
-    <link rel=”preload” href=”cats.json” as=”fetch” type=”application/json” crossorigin=”anonymous”>
-    <link rel="preload" href="styles/app.css" as="style">
-    <link rel="stylesheet" href="styles/app.css" media="print" onload="this.media='all'">
+    <link rel=”preload” href=”cats.json” as=”fetch” type=”application/json”
+    crossorigin=”anonymous”>
+    <link rel="preload" href="styles/app.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="styles/app.css"
+      media="print"
+      onload="this.media='all'"
+    />
     <script src="app.js" defer type="module"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
@@ -27,12 +36,9 @@
         <i class="fa-solid fa-cat"></i>
         <div id="badge"></div>
       </a>
-
     </nav>
 
-    <main>
-
-    </main>
+    <main></main>
 
     <footer>
       <div>
@@ -48,15 +54,31 @@
       <div>
         <p>External links</p>
         <ul>
-          <li><a href="https://en.wikipedia.org/wiki/Cat" target="_blank">about cats</a></li>
-          <li><a href="https://vcahospitals.com/know-your-pet/vaccines-for-cats" target="_blank">necessary vaccines</a>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Cat" target="_blank"
+              >about cats</a
+            >
           </li>
-          <li><a
+          <li>
+            <a
+              href="https://vcahospitals.com/know-your-pet/vaccines-for-cats"
+              target="_blank"
+              >necessary vaccines</a
+            >
+          </li>
+          <li>
+            <a
               href="https://www.amazon.co.jp/s?k=cat+toys&crid=13G6RVPRPT2U3&sprefix=cat+toys%2Caps%2C201&ref=nb_sb_noss_1"
-              target="_blank">cat's
-              toys</a></li>
-          <li><a href="https://www.youtube.com/watch?v=S0DlV8mZTd8&ab_channel=ColeandMarmalade" target="_blank">how to
-              bath a cat</a>
+              target="_blank"
+              >cat's toys</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=S0DlV8mZTd8&ab_channel=ColeandMarmalade"
+              target="_blank"
+              >how to bath a cat</a
+            >
           </li>
         </ul>
       </div>
@@ -66,21 +88,23 @@
         <ul>
           <li>Address: 123 fake street</li>
           <li>phone number: 80 10293847</li>
-          <li><a href="#">Instagram <i class="fa-brands fa-instagram"></i></a></li>
+          <li>
+            <a href="#">Instagram <i class="fa-brands fa-instagram"></i></a>
+          </li>
         </ul>
       </div>
     </footer>
 
     <template id="home-page-template">
+      <link rel="stylesheet" href="/styles/components/cat_home.css" />
       <h1>Cat List</h1>
-      <ul id="cat-list">
-      </ul>
+      <ul id="cat-list"></ul>
     </template>
 
     <template id="cat-item-template">
       <a class="card-link" href="#">
         <div class="card">
-          <img src="" alt="cat-picture" loading="lazy">
+          <img src="" alt="cat-picture" loading="lazy" />
           <div class="card-description">
             <p class="breed">bengal</p>
             <p class="temperament">3 years old</p>
@@ -90,9 +114,7 @@
       </a>
     </template>
 
-
     <template id="details-page-template">
-
       <div class="cat-details">
         <div class="cat-description">
           <h3>Details</h3>
@@ -103,36 +125,42 @@
           <button>I definetly want this cat!</button>
         </div>
 
-        <img src="" alt="cat-picture" loading="lazy">
-
+        <img src="" alt="cat-picture" loading="lazy" />
       </div>
     </template>
 
     <template id="adoption-item-template">
-      <img src="" alt="cat-picture" loading="lazy">
+      <img src="" alt="cat-picture" loading="lazy" />
       <p class="breed">bengal</p>
       <button><i class="fa-solid fa-circle-minus"></i></button>
     </template>
 
     <template id="adoption-page-template">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
 
       <div class="cat-adoption">
         <h2>Your adoption list</h2>
 
-        <ul class="adoption-list">
-
-        </ul>
+        <ul class="adoption-list"></ul>
 
         <form action="#">
           <h3>Fill the adoption form</h3>
-          <input type="text" name="name" placeholder="Name">
-          <input type="text" name="address" placeholder="Address">
-          <input type="text" name="phone" placeholder="Phone number">
-          <input type="text" name="email" placeholder="E-mail">
-          <input class="submit" type="submit" name="submit" value="get a cat!">
+          <input type="text" name="name" placeholder="Name" />
+          <input type="text" name="address" placeholder="Address" />
+          <input type="text" name="phone" placeholder="Phone number" />
+          <input type="text" name="email" placeholder="E-mail" />
+          <input
+            class="submit"
+            type="submit"
+            name="submit"
+            value="get a cat!"
+          />
         </form>
       </div>
     </template>
@@ -144,33 +172,35 @@
           <li>
             <h3>Why a cat?</h3>
             <p>Because they are adorable and badass at the same time.</p>
-            <img src="./cat-q1.jpg" alt="cat-picture" loading="lazy">
+            <img src="./cat-q1.jpg" alt="cat-picture" loading="lazy" />
           </li>
           <li>
             <h3>Are cats better than dogs?</h3>
-            <p>The answer to that question can be difficult, because it depends of
-              multiple factors, but the short answer is <strong>Yes!</strong>
+            <p>
+              The answer to that question can be difficult, because it depends
+              of multiple factors, but the short answer is <strong>Yes!</strong>
             </p>
-            <img src="./cat-q2.jpg" alt="cat-picture" loading="lazy">
+            <img src="./cat-q2.jpg" alt="cat-picture" loading="lazy" />
           </li>
           <li>
             <h3>Are cat vegans?</h3>
-            <p>The cats are as vegan as lions or tigers. So no, the answer is no.
+            <p>
+              The cats are as vegan as lions or tigers. So no, the answer is no.
               Give your cat the proper food if you care about its health.
             </p>
-            <img src="./cat-q3.jpg" alt="cat-picture" loading="lazy">
+            <img src="./cat-q3.jpg" alt="cat-picture" loading="lazy" />
           </li>
           <li>
             <h3>Can cats be trained like dogs are?</h3>
-            <p>A cat could definetly be trained to perform many tasks, but they are not
-              so receptive to training like a dog. Would require a lot of patience and effort.
+            <p>
+              A cat could definetly be trained to perform many tasks, but they
+              are not so receptive to training like a dog. Would require a lot
+              of patience and effort.
             </p>
-            <img src="./cat-q4.jpg" alt="cat-picture" loading="lazy">
+            <img src="./cat-q4.jpg" alt="cat-picture" loading="lazy" />
           </li>
         </ul>
       </div>
-
     </template>
   </body>
-
 </html>
