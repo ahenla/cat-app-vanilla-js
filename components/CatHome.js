@@ -8,20 +8,10 @@ export default class CatHomePage extends HTMLElement {
     this.root = this.attachShadow({ mode: "open" });
   }
 
-  // async loadCSS(styles, component) {
-  //   const request = await fetch(`/styles/components/${component}.css`);
-  //   styles.textContent = await request.text()
-  // }
-
   connectedCallback() {
     const template = document.getElementById("home-page-template");
     const content = template.content.cloneNode(true);
     this.root.appendChild(content);
-
-    // const styles = document.createElement('style')
-    // this.root.appendChild(styles)
-
-    // this.loadCSS(styles, 'cat_home')
 
     window.addEventListener("catlistchange", () => {
       this.render();
