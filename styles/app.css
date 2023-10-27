@@ -1,8 +1,69 @@
-@import "/styles/components/navbar.css";
-@import "/styles/components/footer.css";
-
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Courgette", cursive;
+  background-color: rgb(24, 24, 24);
+  color: rgb(235, 236, 236);
+  font-size: 28px;
+  margin: 0;
+  padding: 0 1em;
+}
+
+nav > a {
+  color: azure;
+  text-decoration: none;
+  position: relative;
+}
+
+#badge {
+  text-align: center;
+  color: azure;
+  width: 16px;
+  font-size: 14px;
+  border-radius: 50%;
+  background-color: tomato;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: Tahoma, sans-serif;
+}
+
+footer {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+  background-color: rgb(24, 24, 24);
+  color: rgb(235, 236, 236);
+  width: 100%;
+  padding: 0.5em;
+  margin: 0;
+  font-size: 18px;
+}
+
+footer a {
+  text-decoration: none;
+  color: azure;
+}
+
+footer a:hover {
+  color: grey;
+}
+
+footer p {
+  font-size: 18px;
+  color: rgb(153, 153, 153);
+}
+
+footer li {
+  padding-bottom: 7px;
 }
