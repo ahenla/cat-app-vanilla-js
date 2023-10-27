@@ -108,14 +108,20 @@
           list-style-type: none;
         }
 
-        #cat-list > li {
-          width: 30%;
-        }
-
         cat-item {
           width: 100%;
           display: block;
           margin: 0.5em auto;
+        }
+      </style>
+      <h1>Cat List</h1>
+      <ul id="cat-list"></ul>
+    </template>
+
+    <template id="cat-item-template">
+      <style>
+        li {
+          width: 30%;
         }
 
         .card-link {
@@ -158,11 +164,6 @@
           font-size: 20px;
         }
       </style>
-      <h1>Cat List</h1>
-      <ul id="cat-list"></ul>
-    </template>
-
-    <template id="cat-item-template">
       <a class="card-link" href="#">
         <div class="card">
           <img src="" alt="cat-picture" loading="lazy" />
@@ -204,7 +205,7 @@
         .cat-description p {
           font-size: 18px;
           text-align: center;
-          padding: 1em;
+          padding: 1.5em;
           line-height: 1.5;
         }
 
