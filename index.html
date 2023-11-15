@@ -191,11 +191,17 @@
 
     <template id="details-page-template">
       <style>
+        :host {
+          display: block;
+        }
+
         .cat-details {
+          width: 80%;
           padding: 0;
-          margin: 0;
+          margin: 0 auto;
           display: flex;
           flex-direction: column-reverse;
+          justify-content: center;
         }
 
         .cat-description {
@@ -208,6 +214,7 @@
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
+          border-top: 5px solid white;
         }
 
         .cat-description h3 {
@@ -237,6 +244,12 @@
 
         .cat-details > img {
           object-fit: cover;
+        }
+
+        @media only screen and (max-width: 600px) {
+          .cat-details {
+            width: 100%;
+          }
         }
       </style>
       <div class="cat-details">
@@ -283,6 +296,7 @@
           align-items: center;
           border-radius: 5px;
           list-style-type: none;
+          padding: 0;
         }
 
         .adoption-card {
@@ -358,6 +372,28 @@
           font-size: 18px;
           text-shadow: 2px gray;
           box-shadow: none;
+        }
+
+        @media only screen and (max-width: 500px) {
+          form {
+            width: 100%;
+          }
+
+          .adoption-card {
+            width: 100%;
+          }
+
+          .adoption-card > adoption-item {
+            font-size: 18px;
+          }
+
+          .adoption-list {
+            width: 100%;
+          }
+
+          button {
+            padding-right: 0.3em;
+          }
         }
       </style>
       <link
